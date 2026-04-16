@@ -1,8 +1,7 @@
 :root{
 --font-body-size: 16px;
---font-heading-size: 32px;
---font-button-size: 2px;
---font-product-title: 18px;
+--font-button-size: 16px;
+ --font-size: 16px;
 }
 
 .header-bar {
@@ -83,12 +82,12 @@ body {
   font-size: var(--font-body-size);
 }
 
-h1 { font-size: var(--font-heading-size); }
-h2 { font-size: calc(var(--font-heading-size) - 6px); }
-h3 { font-size: calc(var(--font-heading-size) - 10px); }
-
 .btn {
   font-size: var(--font-button-size);
+}
+
+p {
+  font-size: var(--font-body-size);
 }
 
 /* End Header Button CSS */
