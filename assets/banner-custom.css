@@ -1,14 +1,11 @@
 .banner-custom {
   background-size: cover;
   background-position: center;
-  padding: 100px 20px;
-  text-align: center;
-  color: #fff;
 }
 
 .banner-content {
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .banner-btn {
