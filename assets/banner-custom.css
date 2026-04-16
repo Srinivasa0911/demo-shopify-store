@@ -4,6 +4,7 @@
  --para-font-size: 20px;
  --font-line-height: 24px;
  --font-margin-bottom:0px;
+ --heading-font-weight:500;
 }
 
 .banner-custom {
@@ -44,4 +45,5 @@ p {
 h1{
 font-size:var(--font-heading-size);
 margin-bottom:var(--font-margin-bottom);
+font-weight:var(--heading-font-weight);
 }
