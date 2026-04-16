@@ -9,6 +9,20 @@
 
     <p>{{ section.settings.text }}</p>
 
+     <a href="{{ section.settings.button_link }}" class="banner-btn">
+
+  {% if section.settings.icon != blank and section.settings.icon_position == 'left' %}
+    <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
+  {% endif %}
+
+  <span>{{ section.settings.button_text }}</span>
+
+  {% if section.settings.icon != blank and section.settings.icon_position == 'right' %}
+    <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
+  {% endif %}
+
+</a>
+
   </div>
 
 </section>
@@ -16,8 +30,8 @@
 
 {% schema %}
 {
-  "name": "Multi Button Section",
-   "settings": [
+  "name": "Custom Banner",
+  "settings": [
     {
       "type": "image_picker",
       "id": "bg_image",
@@ -34,45 +48,37 @@
       "id": "text",
       "label": "Text",
       "default": "Add your description here"
-    }
-   ],
-  "blocks": [
+    },
     {
-      "type": "button",
-      "name": "Button",
-      "settings": [
-        {
-          "type": "text",
-          "id": "button_text",
-          "label": "Button Text",
-          "default": "Shop Now"
-        },
-        {
-          "type": "url",
-          "id": "button_link",
-          "label": "Button Link"
-        },
-        {
-          "type": "image_picker",
-          "id": "icon",
-          "label": "Button Icon"
-        },
-        {
-          "type": "select",
-          "id": "icon_position",
-          "label": "Icon Position",
-          "default": "right",
-          "options": [
-            { "value": "left", "label": "Left" },
-            { "value": "right", "label": "Right" }
-          ]
-        }
-      ]
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
     }
+    {
+  "type": "image_picker",
+  "id": "icon",
+  "label": "Button Icon"
+},
+{
+  "type": "select",
+  "id": "icon_position",
+  "label": "Icon Position",
+  "default": "right",
+  "options": [
+    { "value": "left", "label": "Left" },
+    { "value": "right", "label": "Right" }
+  ]
+}
   ],
   "presets": [
     {
-      "name": "Multi Buttons"
+      "name": "Custom Banner"
     }
   ]
 }
