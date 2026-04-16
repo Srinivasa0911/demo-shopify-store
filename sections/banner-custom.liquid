@@ -9,16 +9,7 @@
 
     <p>{{ section.settings.text }}</p>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div class="multi-buttons">
-=======
-     <a href="{{ section.settings.button_link }}" class="btn">
->>>>>>> parent of 6d7eb88 (banner cta code updated)
-=======
-    {% if section.settings.button_text != blank %}
-       <a href="{{ section.settings.button_link }}" class="btn">
->>>>>>> parent of af27c48 (banner cta button updated)
 
   {% for block in section.blocks %}
     <a href="{{ block.settings.button_link }}" class="btn" {{ block.shopify_attributes }}>
@@ -33,15 +24,10 @@
         <img src="{{ block.settings.icon | image_url }}" class="btn-icon">
       {% endif %}
 
-<<<<<<< HEAD
     </a>
   {% endfor %}
 
 </div>
-=======
-</a>
-    {% endif %}
->>>>>>> parent of af27c48 (banner cta button updated)
 
   </div>
 
@@ -49,8 +35,8 @@
 
 {% schema %}
 {
-  "name": "Custom Banner",
-  "settings": [
+  "name": "Multi Button Section",
+   "settings": [
     {
       "type": "image_picker",
       "id": "bg_image",
@@ -67,37 +53,45 @@
       "id": "text",
       "label": "Text",
       "default": "Add your description here"
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "Shop Now"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
     }
+   ],
+  "blocks": [
     {
-  "type": "image_picker",
-  "id": "icon",
-  "label": "Button Icon"
-},
-{
-  "type": "select",
-  "id": "icon_position",
-  "label": "Icon Position",
-  "default": "right",
-  "options": [
-    { "value": "left", "label": "Left" },
-    { "value": "right", "label": "Right" }
-  ]
-}
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Button Icon"
+        },
+        {
+          "type": "select",
+          "id": "icon_position",
+          "label": "Icon Position",
+          "default": "right",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ]
+        }
+      ]
+    }
   ],
   "presets": [
     {
-      "name": "Custom Banner"
+      "name": "Multi Buttons"
     }
   ]
 }
