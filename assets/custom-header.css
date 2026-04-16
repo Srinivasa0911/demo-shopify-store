@@ -61,8 +61,15 @@ transition: transform 0.3s ease;
 filter: brightness(0) invert(1);
 }
 
-.btn:hover{
-color:#fff;
+/* Keep text above animation */
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Text color change */
+.btn:hover {
+  color: #fff; /* change text color here */
 }
 
 /* End Header Button CSS */
