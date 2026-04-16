@@ -13,7 +13,7 @@
       "type": "banner-custom",
       "name": "Custom Banner",
       "settings": {
-        "bg_image": "shopify://shop_images/banner_bg.png",
+        "bg_image": "shopify://shop_images/gift_banner_background.png",
         "heading": "Welcome to our store",
         "text": "Add your description here",
         "button_text": "Shop Now",
