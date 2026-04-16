@@ -34,8 +34,8 @@ transition: all 0.3s ease;
 }
 
 .btn-icon {
-width: 16px;
-height: 16px;
+width: 24px;
+height: 24px;
 transition: transform 0.3s ease;
 }
 
@@ -45,8 +45,8 @@ background: #000;
 color:#fff;
 }
 
-.btn:hover .btn-icon {
-transform: translateX(4px);
+.btn:hover img{
+filter: brightness(0) invert(1);
 }
 
 /* End Header Button CSS */
