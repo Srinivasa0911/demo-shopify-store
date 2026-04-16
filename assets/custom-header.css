@@ -90,4 +90,8 @@ p {
   font-size: var(--font-body-size);
 }
 
+.header-bar{
+padding: 8px 50px;
+}
+
 /* End Header Button CSS */
