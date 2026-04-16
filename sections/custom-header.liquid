@@ -14,9 +14,22 @@
   </div>
 
   <div class="header-right">
-    <a href="{{ section.settings.button_link }}" class="header-btn">
-      {{ section.settings.button_text }} 
-    </a>
+  <a href="{{ section.settings.link }}" class="btn">
+  <span>{{ section.settings.button_text }}</span>
+
+  {% if section.settings.icon %}
+    <img src="{{ section.settings.icon | image_url }}" alt="icon">
+  {% endif %}
+</a>
+{% if section.settings.icon_position == 'left' %}
+  <img src="{{ section.settings.icon | image_url }}">
+{% endif %}
+
+<span>{{ section.settings.button_text }}</span>
+
+{% if section.settings.icon_position == 'right' %}
+  <img src="{{ section.settings.icon | image_url }}">
+{% endif %}
   </div>
 </div>
 
@@ -50,6 +63,11 @@
       "id": "button_link",
       "label": "Button Link"
     }
+    {
+  "type": "image_picker",
+  "id": "icon",
+  "label": "Button Icon"
+}
   ],
   "presets": [
     {
