@@ -2,6 +2,7 @@
 --font-heading-size: 70px;
 --font-button-size: 16px;
  --font-size: 20px;
+ --line-height: 24px;
 }
 
 .banner-custom {
@@ -35,7 +36,8 @@ background-repeat: no-repeat;
 }
 
 p {
- font-size: var(--font-body-size);
+ font-size: var(--font-size);
+ line-height: var(--line-height);
 }
 
 h1{
