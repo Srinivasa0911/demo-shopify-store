@@ -41,7 +41,7 @@ transition: transform 0.3s ease;
 }
 
 /* Sliding background */
-.btn::before {
+.btn a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -54,12 +54,12 @@ transition: transform 0.3s ease;
 }
 
 /* On hover → slide in */
-.btn:hover::before {
+.btn a:hover::before {
   left: 0;
 }
 
 /* Keep text above animation */
-.btn span {
+.btn a span {
   position: relative;
   z-index: 1;
 }
