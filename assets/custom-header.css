@@ -23,20 +23,29 @@
 /* Header Button CSS */
 
 .btn {
-  padding: 16px 8px;
-  background: #FFF544;
-  color: #000;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 12px 24px;
+background: black;
+color: #fff;
+text-decoration: none;
+transition: all 0.3s ease;
 }
 
+.btn-icon {
+width: 16px;
+height: 16px;
+transition: transform 0.3s ease;
+}
+
+/* Hover animation */
 .btn:hover {
-  background: #000;
+background: #ff6600;
 }
 
-.btn img{
-filter: brightness(0) invert(1);
+.btn:hover .btn-icon {
+transform: translateX(4px);
 }
 
 /* End Header Button CSS */
