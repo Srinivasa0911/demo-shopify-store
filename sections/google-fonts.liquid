@@ -1,0 +1,556 @@
+{% comment %}
+  ============================================================
+  Google Fonts Section — by EcomRanks
+  https://www.youtube.com/@EcomRanks
+  Fiverr: https://fvrr.co/3BsbtyA
+  ============================================================
+  HOW TO USE:
+  METHOD 1 — By Font Name:
+    1. Go to fonts.google.com and pick a font
+    2. Copy the exact font name (e.g. Playfair Display)
+    3. Paste it into the Font Name fields below
+
+
+  METHOD 2 — By Google Fonts Link:
+    1. Go to fonts.google.com
+    2. Select all the fonts & weights you want
+    3. Click "Get embed code" → Copy the link URL
+    4. Paste the full URL into the "Google Fonts Link" field
+  ============================================================
+{% endcomment %}
+
+
+{% comment %} ===== LOAD GOOGLE FONTS VIA LINK ===== {% endcomment %}
+
+
+{%- if section.settings.gf_link_url != 'https://' -%}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="{{ section.settings.gf_link_url }}" rel="stylesheet">
+{%- endif -%}
+
+
+{% comment %} ===== LOAD GOOGLE FONTS BY NAME ===== {% endcomment %}
+
+
+{%- assign gf_families = '' -%}
+
+
+{%- if section.settings.font_1_name != 'none' -%}
+  {%- assign f1_encoded = section.settings.font_1_name | replace: ' ', '+' -%}
+  {%- assign f1_weights = section.settings.font_1_weights | replace: ' ', '' -%}
+  {%- if section.settings.font_1_italic -%}
+    {%- assign gf_families = gf_families | append: 'family=' | append: f1_encoded | append: ':ital,wght@0,' | append: f1_weights | append: ';1,' | append: f1_weights | append: '&' -%}
+  {%- else -%}
+    {%- assign gf_families = gf_families | append: 'family=' | append: f1_encoded | append: ':wght@' | append: f1_weights | append: '&' -%}
+  {%- endif -%}
+{%- endif -%}
+
+
+{%- if section.settings.font_2_name != 'none' -%}
+  {%- assign f2_encoded = section.settings.font_2_name | replace: ' ', '+' -%}
+  {%- assign f2_weights = section.settings.font_2_weights | replace: ' ', '' -%}
+  {%- if section.settings.font_2_italic -%}
+    {%- assign gf_families = gf_families | append: 'family=' | append: f2_encoded | append: ':ital,wght@0,' | append: f2_weights | append: ';1,' | append: f2_weights | append: '&' -%}
+  {%- else -%}
+    {%- assign gf_families = gf_families | append: 'family=' | append: f2_encoded | append: ':wght@' | append: f2_weights | append: '&' -%}
+  {%- endif -%}
+{%- endif -%}
+
+
+{%- if section.settings.font_3_name != 'none' -%}
+  {%- assign f3_encoded = section.settings.font_3_name | replace: ' ', '+' -%}
+  {%- assign f3_weights = section.settings.font_3_weights | replace: ' ', '' -%}
+  {%- if section.settings.font_3_italic -%}
+    {%- assign gf_families = gf_families | append: 'family=' | append: f3_encoded | append: ':ital,wght@0,' | append: f3_weights | append: ';1,' | append: f3_weights | append: '&' -%}
+  {%- else -%}
+    {%- assign gf_families = gf_families | append: 'family=' | append: f3_encoded | append: ':wght@' | append: f3_weights | append: '&' -%}
+  {%- endif -%}
+{%- endif -%}
+
+
+{%- if gf_families != '' -%}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?{{ gf_families }}display=swap" rel="stylesheet">
+{%- endif -%}
+
+
+{%- style -%}
+  /* ==========================================================
+     DAWN THEME — CSS Custom Property Overrides
+     Dawn uses --font-heading-family and --font-body-family
+     to control all fonts. Overriding these at :root ensures
+     the font applies EVERYWHERE, not just specific classes.
+     ========================================================== */
+
+
+  {%- if section.settings.heading_font != 'none' -%}
+    :root {
+      --font-heading-family: '{{ section.settings.heading_font }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  {%- if section.settings.body_font != 'none' -%}
+    :root {
+      --font-body-family: '{{ section.settings.body_font }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* ==========================================================
+     DIRECT ELEMENT TARGETING
+     Covers Dawn + other Shopify themes as fallback
+     ========================================================== */
+
+
+  /* — Headings — */
+  {%- if section.settings.heading_font != 'none' -%}
+    h1, h2, h3, h4, h5, h6,
+    .h0, .h1, .h2, .h3, .h4, .h5, .h6,
+    .title,
+    .hxs-heading,
+    .banner__heading,
+    .rich-text__heading,
+    .collection-hero__title,
+    .featured-collection__heading {
+      font-family: '{{ section.settings.heading_font }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* — Body / Paragraphs — */
+  {%- if section.settings.body_font != 'none' -%}
+    body,
+    p,
+    li,
+    span,
+    a,
+    input,
+    textarea,
+    select,
+    .rte,
+    .rte p,
+    .rte li {
+      font-family: '{{ section.settings.body_font }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* — Navigation / Menu — */
+  {%- if section.settings.nav_font != 'none' -%}
+    nav,
+    nav a,
+    .header__menu-item,
+    .header__menu-item span,
+    .menu-drawer__menu-item,
+    .header__heading-link,
+    .nav,
+    .site-nav,
+    .site-nav__link,
+    .mega-menu__link,
+    .header__active-menu-item {
+      font-family: '{{ section.settings.nav_font }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* — Buttons — */
+  {%- if section.settings.button_font != 'none' -%}
+    button,
+    .button,
+    .btn,
+    .shopify-payment-button button,
+    .shopify-payment-button__button,
+    a.button,
+    input[type="submit"],
+    .product-form__submit,
+    .cart__submit-button {
+      font-family: '{{ section.settings.button_font }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* — Product Titles — */
+  {%- if section.settings.product_title_font != 'none' -%}
+    .product__title,
+    .card__heading,
+    .card__heading a,
+    .card-information__text,
+    .full-unstyled-link,
+    .product-card__title,
+    .product-item__title,
+    .card__text,
+    .card-wrapper .card__heading a,
+    .predictive-search__result-group .predictive-search__item-heading {
+      font-family: '{{ section.settings.product_title_font }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* — Product Price — */
+  {%- if section.settings.price_font != 'none' -%}
+    .price,
+    .price-item,
+    .price-item--regular,
+    .price-item--sale,
+    .price-item--last,
+    .price__regular,
+    .price__sale,
+    .product__price,
+    .money,
+    .cart-item__price,
+    .product-option {
+      font-family: '{{ section.settings.price_font }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* ===== CUSTOM CLASS TARGETING ===== */
+
+
+  /* — Font 1 Custom Classes — */
+  {%- if section.settings.font_1_name != 'none' and section.settings.font_1_classes != 'none' -%}
+    {%- assign f1_classes = section.settings.font_1_classes | split: ',' -%}
+    {%- for class in f1_classes -%}
+      {%- assign trimmed = class | strip -%}
+      {%- if trimmed != blank -%}
+        .{{ trimmed }}{% unless forloop.last %},{% endunless %}
+      {%- endif -%}
+    {%- endfor -%}
+    {
+      font-family: '{{ section.settings.font_1_name }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* — Font 2 Custom Classes — */
+  {%- if section.settings.font_2_name != 'none' and section.settings.font_2_classes != 'none' -%}
+    {%- assign f2_classes = section.settings.font_2_classes | split: ',' -%}
+    {%- for class in f2_classes -%}
+      {%- assign trimmed = class | strip -%}
+      {%- if trimmed != blank -%}
+        .{{ trimmed }}{% unless forloop.last %},{% endunless %}
+      {%- endif -%}
+    {%- endfor -%}
+    {
+      font-family: '{{ section.settings.font_2_name }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* — Font 3 Custom Classes — */
+  {%- if section.settings.font_3_name != 'none' and section.settings.font_3_classes != 'none' -%}
+    {%- assign f3_classes = section.settings.font_3_classes | split: ',' -%}
+    {%- for class in f3_classes -%}
+      {%- assign trimmed = class | strip -%}
+      {%- if trimmed != blank -%}
+        .{{ trimmed }}{% unless forloop.last %},{% endunless %}
+      {%- endif -%}
+    {%- endfor -%}
+    {
+      font-family: '{{ section.settings.font_3_name }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* — Link-based Font Custom Classes — */
+  {%- if section.settings.gf_link_url != 'https://' and section.settings.link_font_classes != 'none' -%}
+    {%- assign lf_classes = section.settings.link_font_classes | split: ',' -%}
+    {%- for class in lf_classes -%}
+      {%- assign trimmed = class | strip -%}
+      {%- if trimmed != blank -%}
+        .{{ trimmed }}{% unless forloop.last %},{% endunless %}
+      {%- endif -%}
+    {%- endfor -%}
+    {
+      font-family: '{{ section.settings.link_font_name }}', sans-serif !important;
+    }
+  {%- endif -%}
+
+
+  /* ===== CREDIT ===== */
+  .ecomranks-gf-credit-{{ section.id }} {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 12px;
+    opacity: 0.5;
+  }
+
+
+  .ecomranks-gf-credit-{{ section.id }} a {
+    color: inherit;
+    text-decoration: underline;
+  }
+{%- endstyle -%}
+
+
+{% if section.settings.show_credit %}
+  <div class="ecomranks-gf-credit-{{ section.id }}">
+    Fonts by <a href="https://fvrr.co/3BsbtyA" target="_blank" rel="noopener">Ecom Ranks</a>
+  </div>
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "Google Fonts (EcomRanks)",
+  "tag": "section",
+  "class": "ecomranks-google-fonts",
+  "settings": [
+    {
+      "type": "header",
+      "content": "━━━ ADD VIA LINK (Easy) ━━━"
+    },
+    {
+      "type": "paragraph",
+      "content": "🔗 Easiest method: Go to fonts.google.com → Select your fonts → Click 'Get embed code' → Copy the link URL → Paste below. This loads ALL fonts you selected on Google Fonts in one go."
+    },
+    {
+      "type": "text",
+      "id": "gf_link_url",
+      "label": "Google Fonts Link URL",
+      "info": "Paste the full URL (starts with https://fonts.googleapis.com/css2?family=...)",
+      "default": "https://"
+    },
+    {
+      "type": "paragraph",
+      "content": "⬆️ After pasting the link above, scroll down to 'APPLY FONTS' and type the font name to assign it. You can also use both methods — link for some fonts, name for others."
+    },
+
+
+    {
+      "type": "header",
+      "content": "━━━ ADD BY NAME ━━━"
+    },
+    {
+      "type": "paragraph",
+      "content": "📝 Alternative method: Type the exact Google Font name below and pick the weights to load."
+    },
+
+
+    {
+      "type": "header",
+      "content": "Font 1"
+    },
+    {
+      "type": "text",
+      "id": "font_1_name",
+      "label": "Google Font Name",
+      "info": "Type the exact name from Google Fonts (e.g. Playfair Display, Bebas Neue, Poppins)",
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "font_1_weights",
+      "label": "Font Weights to Load",
+      "info": "Load only what you need for faster page speed.",
+      "default": "400;700",
+      "options": [
+        { "value": "400", "label": "Regular (400) only" },
+        { "value": "400;700", "label": "Regular + Bold (400, 700)" },
+        { "value": "300;400;700", "label": "Light + Regular + Bold (300, 400, 700)" },
+        { "value": "300;400;500;700", "label": "Light to Bold (300, 400, 500, 700)" },
+        { "value": "100;200;300;400;500;600;700;800;900", "label": "All weights (100–900)" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "font_1_italic",
+      "label": "Load italic styles too",
+      "default": false,
+      "info": "⚠️ Only turn ON if the font supports italic. Handwriting/display fonts usually don't — turning this on for those fonts will break loading."
+    },
+
+
+    {
+      "type": "header",
+      "content": "Font 2 (Optional)"
+    },
+    {
+      "type": "text",
+      "id": "font_2_name",
+      "label": "Google Font Name",
+      "info": "Type the exact name from Google Fonts",
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "font_2_weights",
+      "label": "Font Weights to Load",
+      "default": "400;700",
+      "options": [
+        { "value": "400", "label": "Regular (400) only" },
+        { "value": "400;700", "label": "Regular + Bold (400, 700)" },
+        { "value": "300;400;700", "label": "Light + Regular + Bold (300, 400, 700)" },
+        { "value": "300;400;500;700", "label": "Light to Bold (300, 400, 500, 700)" },
+        { "value": "100;200;300;400;500;600;700;800;900", "label": "All weights (100–900)" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "font_2_italic",
+      "label": "Load italic styles too",
+      "default": false,
+      "info": "⚠️ Only turn ON if the font supports italic."
+    },
+
+
+    {
+      "type": "header",
+      "content": "Font 3 (Optional)"
+    },
+    {
+      "type": "text",
+      "id": "font_3_name",
+      "label": "Google Font Name",
+      "info": "Type the exact name from Google Fonts",
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "font_3_weights",
+      "label": "Font Weights to Load",
+      "default": "400;700",
+      "options": [
+        { "value": "400", "label": "Regular (400) only" },
+        { "value": "400;700", "label": "Regular + Bold (400, 700)" },
+        { "value": "300;400;700", "label": "Light + Regular + Bold (300, 400, 700)" },
+        { "value": "300;400;500;700", "label": "Light to Bold (300, 400, 500, 700)" },
+        { "value": "100;200;300;400;500;600;700;800;900", "label": "All weights (100–900)" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "font_3_italic",
+      "label": "Load italic styles too",
+      "default": false,
+      "info": "⚠️ Only turn ON if the font supports italic."
+    },
+
+
+    {
+      "type": "header",
+      "content": "━━━ APPLY FONTS ━━━"
+    },
+    {
+      "type": "paragraph",
+      "content": "⚡ Type the EXACT Google Font name into each field to apply it. Works for fonts loaded via link OR by name above. Leave as 'none' to skip."
+    },
+    {
+      "type": "text",
+      "id": "heading_font",
+      "label": "Headings Font (H1–H6)",
+      "info": "Also overrides Dawn's --font-heading-family variable for full coverage",
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "body_font",
+      "label": "Body / Paragraph Font",
+      "info": "Also overrides Dawn's --font-body-family variable for full coverage",
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "nav_font",
+      "label": "Navigation / Menu Font",
+      "info": "Applied to header menu links",
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "button_font",
+      "label": "Buttons Font",
+      "info": "Applied to all buttons including Add to Cart",
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "product_title_font",
+      "label": "Product Titles Font",
+      "info": "Applied to product cards and product page titles",
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "price_font",
+      "label": "Price Font",
+      "info": "Applied to all price elements",
+      "default": "none"
+    },
+
+
+    {
+      "type": "header",
+      "content": "━━━ TARGET BY CLASS ━━━"
+    },
+    {
+      "type": "paragraph",
+      "content": "🎯 Advanced: Right-click any element on your store → Inspect → Copy the class name → Paste below. Separate multiple classes with commas. Do NOT include the dot (.) before the class name."
+    },
+    {
+      "type": "text",
+      "id": "font_1_classes",
+      "label": "Apply Font 1 to these classes",
+      "info": "Example: announcement-bar__message, footer-block__heading",
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "font_2_classes",
+      "label": "Apply Font 2 to these classes",
+      "info": "Example: product__description, rich-text__text",
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "font_3_classes",
+      "label": "Apply Font 3 to these classes",
+      "info": "Example: cart__heading, header__heading",
+      "default": "none"
+    },
+    {
+      "type": "paragraph",
+      "content": "👇 If you loaded fonts via the link method and want to target specific classes with those fonts, use the fields below."
+    },
+    {
+      "type": "text",
+      "id": "link_font_name",
+      "label": "Link Font — Font Name",
+      "info": "Type the exact name of a font loaded via the link above",
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "link_font_classes",
+      "label": "Link Font — Apply to classes",
+      "info": "Example: slideshow__heading, collection-hero__title",
+      "default": "none"
+    },
+
+
+    {
+      "type": "header",
+      "content": "━━━ ECOMRANKS CREDIT ━━━"
+    },
+    {
+      "type": "paragraph",
+      "content": "This section was built by Ecom Ranks. Need custom Shopify development, theme customization, or a full store build? [Hire me on Fiverr →](https:\/\/fvrr.co\/3BsbtyA)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_credit",
+      "label": "Show 'Fonts by Ecom Ranks' credit",
+      "default": true,
+      "info": "A small credit link below the section."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Google Fonts (EcomRanks)"
+    }
+  ]
+}
+{% endschema %}
