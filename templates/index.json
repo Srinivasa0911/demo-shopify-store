@@ -14,11 +14,10 @@
       "name": "Custom Banner",
       "settings": {
         "bg_image": "shopify://shop_images/gift_banner_background.png",
-        "heading": "Welcome to our store",
-        "text": "Add your description here",
+        "heading": "The Gift Guide",
+        "text": "Add your Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.description here",
         "button_text": "Shop Now",
-        "button_link": "",
-        "text-one": "Add your description here"
+        "button_link": ""
       }
     },
     "image_banner": {
