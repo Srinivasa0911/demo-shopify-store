@@ -67,11 +67,40 @@
         "icon": "shopify://shop_images/arrow.svg",
         "icon_position": "right"
       }
+    },
+    "google_fonts_eCrjKN": {
+      "type": "google-fonts",
+      "name": "Google Fonts (EcomRanks)",
+      "settings": {
+        "gf_link_url": "https://",
+        "font_1_name": "Jost",
+        "font_1_weights": "400;700",
+        "font_1_italic": false,
+        "font_2_name": "none",
+        "font_2_weights": "400;700",
+        "font_2_italic": false,
+        "font_3_name": "none",
+        "font_3_weights": "400;700",
+        "font_3_italic": false,
+        "heading_font": "Jost",
+        "body_font": "Jost",
+        "nav_font": "none",
+        "button_font": "Jost",
+        "product_title_font": "none",
+        "price_font": "none",
+        "font_1_classes": "none",
+        "font_2_classes": "none",
+        "font_3_classes": "none",
+        "link_font_name": "none",
+        "link_font_classes": "none",
+        "show_credit": false
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "custom_header_FpTNff"
+    "custom_header_FpTNff",
+    "google_fonts_eCrjKN"
   ]
 }
