@@ -94,4 +94,9 @@ p {
 padding: 8px 50px;
 }
 
+.header-left img{
+position: relative;
+top:4px;
+}
+
 /* End Header Button CSS */
