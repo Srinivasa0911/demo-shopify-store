@@ -34,3 +34,29 @@
   background: #ff6600;
   transform: translateY(-2px) scale(1.05);
 }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: black;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover animation */
+.btn:hover {
+  background: #ff6600;
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(4px);
+}
