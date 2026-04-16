@@ -1,6 +1,6 @@
 {{ 'banner-custom.css' | asset_url | stylesheet_tag }}
 
-<section class="banner-custom"
+<section class="banner-custom">
   style="background-image: url({{ section.settings.bg_image | image_url }});">
 
   <div class="banner-content">
@@ -9,43 +9,24 @@
 
     <p>{{ section.settings.text }}</p>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div class="multi-buttons">
-=======
-     <a href="{{ section.settings.button_link }}" class="btn">
->>>>>>> parent of 6d7eb88 (banner cta code updated)
-=======
-    {% if section.settings.button_text != blank %}
-       <a href="{{ section.settings.button_link }}" class="btn">
->>>>>>> parent of af27c48 (banner cta button updated)
+     <a href="{{ section.settings.button_link }}" class="banner-btn">
 
-  {% for block in section.blocks %}
-    <a href="{{ block.settings.button_link }}" class="btn" {{ block.shopify_attributes }}>
-      
-      {% if block.settings.icon_position == 'left' %}
-        <img src="{{ block.settings.icon | image_url }}" class="btn-icon">
-      {% endif %}
+  {% if section.settings.icon != blank and section.settings.icon_position == 'left' %}
+    <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
+  {% endif %}
 
-      <span>{{ block.settings.button_text }}</span>
+  <span>{{ section.settings.button_text }}</span>
 
-      {% if block.settings.icon_position == 'right' %}
-        <img src="{{ block.settings.icon | image_url }}" class="btn-icon">
-      {% endif %}
+  {% if section.settings.icon != blank and section.settings.icon_position == 'right' %}
+    <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
+  {% endif %}
 
-<<<<<<< HEAD
-    </a>
-  {% endfor %}
-
-</div>
-=======
 </a>
-    {% endif %}
->>>>>>> parent of af27c48 (banner cta button updated)
 
   </div>
 
 </section>
+
 
 {% schema %}
 {
