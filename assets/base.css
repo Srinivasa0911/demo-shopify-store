@@ -6,6 +6,10 @@
   --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   --focused-base-outline-offset: 0.3rem;
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+   --font-body-size: 16px;
+  --font-heading-size: 32px;
+  --font-button-size: 14px;
+  --font-product-title: 18px;
 }
 
 .product-card-wrapper .card,
@@ -3596,3 +3600,14 @@ details-disclosure > details {
   }
 }
 
+body {
+  font-size: var(--font-body-size);
+}
+
+h1 { font-size: var(--font-heading-size); }
+h2 { font-size: calc(var(--font-heading-size) - 6px); }
+h3 { font-size: calc(var(--font-heading-size) - 10px); }
+
+.btn {
+  font-size: var(--font-button-size);
+}

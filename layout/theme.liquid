@@ -296,13 +296,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    <style>
-:root {
-  --font-body-size: {{ settings.body_font_size }}px;
-  --font-heading-size: {{ settings.heading_font_size }}px;
-  --font-button-size: {{ settings.button_font_size }}px;
-}
-</style>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -379,43 +372,6 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-{% schema %}
-{
-  "name": "Global Font Size",
-  "settings": [
-{
-  "type": "range",
-  "id": "body_font_size",
-  "label": "Body Font Size",
-  "min": 12,
-  "max": 20,
-  "default": 16
-},
-{
-  "type": "range",
-  "id": "heading_font_size",
-  "label": "Heading Font Size",
-  "min": 20,
-  "max": 60,
-  "default": 32
-},
-{
-  "type": "range",
-  "id": "button_font_size",
-  "label": "Button Font Size",
-  "min": 12,
-  "max": 24,
-  "default": 14
-}
-  ],
-  "presets": [
-    {
-      "name": "Global Font Size"
-    }
-  ]
-}
-{% endschema %}
 
   </body>
 </html>
