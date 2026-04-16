@@ -54,7 +54,6 @@
         "text_fyarJX",
         "button"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/banner_one.webp",
         "image_2": "shopify://shop_images/banner_two.webp",
@@ -72,7 +71,6 @@
     },
     "featured_collection": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "collection": "all",
         "products_to_show": 8,
