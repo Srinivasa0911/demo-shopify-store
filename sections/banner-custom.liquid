@@ -10,9 +10,19 @@
     <p>{{ section.settings.text }}</p>
 
     {% if section.settings.button_text != blank %}
-      <a href="{{ section.settings.button_link }}" class="banner-btn">
-        {{ section.settings.button_text }}
-      </a>
+       <a href="{{ section.settings.button_link }}" class="btn">
+
+  {% if section.settings.icon != blank and section.settings.icon_position == 'left' %}
+    <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
+  {% endif %}
+
+  <span>{{ section.settings.button_text }}</span>
+
+  {% if section.settings.icon != blank and section.settings.icon_position == 'right' %}
+    <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
+  {% endif %}
+
+</a>
     {% endif %}
 
   </div>
@@ -52,6 +62,21 @@
       "id": "button_link",
       "label": "Button Link"
     }
+    {
+  "type": "image_picker",
+  "id": "icon",
+  "label": "Button Icon"
+},
+{
+  "type": "select",
+  "id": "icon_position",
+  "label": "Icon Position",
+  "default": "right",
+  "options": [
+    { "value": "left", "label": "Left" },
+    { "value": "right", "label": "Right" }
+  ]
+}
   ],
   "presets": [
     {
