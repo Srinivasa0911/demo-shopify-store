@@ -93,7 +93,7 @@
         "font_3_classes": "none",
         "link_font_name": "none",
         "link_font_classes": "none",
-        "show_credit": true
+        "show_credit": false
       }
     }
   },
