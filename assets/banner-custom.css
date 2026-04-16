@@ -1,8 +1,9 @@
 :root{
 --font-heading-size: 70px;
 --font-button-size: 16px;
- --font-size: 20px;
- --line-height: 24px;
+ --para-font-size: 20px;
+ --font-line-height: 24px;
+ --font-margin-bottom:0px;
 }
 
 .banner-custom {
@@ -36,10 +37,11 @@ background-repeat: no-repeat;
 }
 
 p {
- font-size: var(--font-size);
- line-height: var(--line-height);
+ font-size: var(--para-font-size);
+ line-height: var(--font-line-height);
 }
 
 h1{
 font-size:var(--font-heading-size);
+margin-bottom:var(--font-margin-bottom);
 }
