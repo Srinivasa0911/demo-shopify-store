@@ -15,9 +15,7 @@
       "settings": {
         "bg_image": "shopify://shop_images/gift_banner_background.png",
         "heading": "The Gift Guide",
-        "text": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
-        "button_text": "Shop Now",
-        "button_link": ""
+        "text": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
       }
     },
     "image_banner": {
@@ -54,6 +52,7 @@
         "text_fyarJX",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/banner_one.webp",
         "image_2": "shopify://shop_images/banner_two.webp",
@@ -71,6 +70,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "all",
         "products_to_show": 8,
