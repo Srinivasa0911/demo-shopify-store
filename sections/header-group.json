@@ -59,9 +59,9 @@
       "name": "Custom Header",
       "settings": {
         "logo": "shopify://shop_images/tisso_vision_logo.svg",
-        "text": "Welcome to our store",
-        "button_text": "Shop Now",
-        "button_link": ""
+        "text": "Find the ideal gift for your loved ones.",
+        "button_text": "Choose Gift",
+        "button_link": "#"
       }
     }
   },
