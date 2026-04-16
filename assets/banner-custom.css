@@ -20,6 +20,27 @@ background-repeat: no-repeat;
   left: 60px;
 }
 
+<<<<<<< HEAD
+=======
+.banner-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  text-transform:uppercase;
+}
+
+.banner-btn:hover {
+  background: orange;
+}
+
+.btn {
+ font-size: var(--font-button-size);
+}
+
+>>>>>>> parent of 6d7eb88 (banner cta code updated)
 p {
  font-size: var(--para-font-size);
  line-height: var(--font-line-height);

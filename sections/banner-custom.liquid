@@ -9,7 +9,11 @@
 
     <p>{{ section.settings.text }}</p>
 
+<<<<<<< HEAD
     <div class="multi-buttons">
+=======
+     <a href="{{ section.settings.button_link }}" class="btn">
+>>>>>>> parent of 6d7eb88 (banner cta code updated)
 
   {% for block in section.blocks %}
     <a href="{{ block.settings.button_link }}" class="btn" {{ block.shopify_attributes }}>
@@ -56,24 +60,24 @@
     },
     {
       "type": "text",
-      "id": "button_text_one",
-      "label": "Button Text One",
+      "id": "button_text",
+      "label": "Button Text",
       "default": "Shop Now"
     },
     {
       "type": "url",
-      "id": "button_link_one",
-      "label": "Button Link One"
+      "id": "button_link",
+      "label": "Button Link"
     }
     {
   "type": "image_picker",
-  "id": "icon_one",
-  "label": "Button Icon One"
+  "id": "icon",
+  "label": "Button Icon"
 },
 {
   "type": "select",
-  "id": "icon_position_one",
-  "label": "Icon Position One",
+  "id": "icon_position",
+  "label": "Icon Position",
   "default": "right",
   "options": [
     { "value": "left", "label": "Left" },
