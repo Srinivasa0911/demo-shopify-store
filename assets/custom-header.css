@@ -78,16 +78,12 @@ filter: brightness(0) invert(1);
   color: #fff; /* change text color here */
 }
 
-body {
-  font-size: var(--font-body-size);
-}
-
 .btn {
   font-size: var(--font-button-size);
 }
 
 p {
-  font-size: var(--font-body-size);
+  font-size: var(--font-size);
 }
 
 .header-bar{

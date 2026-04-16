@@ -13,9 +13,9 @@ background-repeat: no-repeat;
 }
 
 .banner-content {
-  max-width: 600px;
+  max-width: 580px;
   position:relative;
-  left: 60px;;
+  left: 60px;
 }
 
 .banner-btn {
