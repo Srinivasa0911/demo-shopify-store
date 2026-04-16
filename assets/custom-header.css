@@ -1,3 +1,10 @@
+:root{
+--font-body-size: 16px;
+--font-heading-size: 32px;
+--font-button-size: 14px;
+--font-product-title: 18px;
+}
+
 .header-bar {
   display: flex;
   align-items: center;
@@ -70,6 +77,18 @@ filter: brightness(0) invert(1);
 /* Text color change */
 .btn:hover {
   color: #fff; /* change text color here */
+}
+
+body {
+  font-size: var(--font-body-size);
+}
+
+h1 { font-size: var(--font-heading-size); }
+h2 { font-size: calc(var(--font-heading-size) - 6px); }
+h3 { font-size: calc(var(--font-heading-size) - 10px); }
+
+.btn {
+  font-size: var(--font-button-size);
 }
 
 /* End Header Button CSS */
