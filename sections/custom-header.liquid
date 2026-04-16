@@ -21,15 +21,6 @@
     <img src="{{ section.settings.icon | image_url }}" alt="icon">
   {% endif %}
 </a>
-{% if section.settings.icon_position == 'left' %}
-  <img src="{{ section.settings.icon | image_url }}">
-{% endif %}
-
-<span>{{ section.settings.button_text }}</span>
-
-{% if section.settings.icon_position == 'right' %}
-  <img src="{{ section.settings.icon | image_url }}">
-{% endif %}
   </div>
 </div>
 
