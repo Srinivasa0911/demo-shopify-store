@@ -1,7 +1,5 @@
 .banner-custom {
- background-repeat: no-repeat;
- min-height: 880px;
- background-size: cover;
+ padding: 380px 0px;
 }
 
 .banner-content {
