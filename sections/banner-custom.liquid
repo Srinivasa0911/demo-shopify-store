@@ -9,8 +9,7 @@
 
     <p>{{ section.settings.text }}</p>
 
-    {% if section.settings.button_text != blank %}
-       <a href="{{ section.settings.button_link }}" class="btn">
+     <a href="{{ section.settings.button_link }}" class="btn">
 
   {% if section.settings.icon != blank and section.settings.icon_position == 'left' %}
     <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
@@ -23,7 +22,6 @@
   {% endif %}
 
 </a>
-    {% endif %}
 
   </div>
 
