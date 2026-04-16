@@ -1,0 +1,25 @@
+.banner-custom {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.banner-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.banner-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.banner-btn:hover {
+  background: orange;
+}

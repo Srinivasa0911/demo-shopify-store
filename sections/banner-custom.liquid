@@ -1,0 +1,70 @@
+{{ 'banner-custom.css' | asset_url | stylesheet_tag }}
+
+<section class="banner-custom"
+  style="background-image: url({{ section.settings.bg_image | image_url }});">
+
+  <div class="banner-content">
+
+    <h1>{{ section.settings.heading }}</h1>
+
+    <p>{{ section.settings.text }}</p>
+
+    {% if section.settings.button_text != blank %}
+      <a href="{{ section.settings.button_link }}" class="banner-btn">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+
+    <p>{{ section.settings.text }}</p>
+
+  </div>
+
+</section>
+
+
+{% schema %}
+{
+  "name": "Custom Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Add your description here"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "textarea",
+      "id": "text-one",
+      "label": "Text-one",
+      "default": "Add your description here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner"
+    }
+  ]
+}
+{% endschema %}
