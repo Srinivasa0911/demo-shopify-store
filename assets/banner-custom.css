@@ -1,6 +1,7 @@
 .banner-custom {
  background-repeat: no-repeat;
  min-height: 880px;
+ background-size: cover;
 }
 
 .banner-content {
