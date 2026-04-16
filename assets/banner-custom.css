@@ -27,6 +27,7 @@ background-repeat: no-repeat;
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  text-transform:uppercase;
 }
 
 .banner-btn:hover {
