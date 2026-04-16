@@ -1,0 +1,62 @@
+{{ 'custom-header.css' | asset_url | stylesheet_tag }}
+
+<!-- Start Custom Header -->
+
+<div class="header-bar">
+  <div class="header-left">
+    {% if section.settings.logo %}
+      <img src="{{ section.settings.logo | image_url }}" alt="Logo">
+    {% endif %}
+  </div>
+
+  <div class="header-center">
+    <p>{{ section.settings.text }}</p>
+  </div>
+
+  <div class="header-right">
+    <a href="{{ section.settings.button_link }}" class="header-btn">
+      {{ section.settings.button_text }}
+    </a>
+  </div>
+</div>
+
+<!-- End Custom Header -->
+
+<!-- Start Header Schema -->
+
+{% schema %}
+{
+  "name": "Header Bar",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Center Text",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header Bar"
+    }
+  ]
+}
+{% endschema %}
+
+<!-- End Header Schema -->
