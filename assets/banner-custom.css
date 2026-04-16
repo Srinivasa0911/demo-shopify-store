@@ -1,3 +1,9 @@
+:root{
+--font-heading-size: 70px;
+--font-button-size: 16px;
+ --font-size: 20px;
+}
+
 .banner-custom {
 background-size: 100%;
 background-size: 100%;
@@ -21,4 +27,16 @@ background-repeat: no-repeat;
 
 .banner-btn:hover {
   background: orange;
+}
+
+.btn {
+ font-size: var(--font-button-size);
+}
+
+p {
+ font-size: var(--font-body-size);
+}
+
+h1{
+--font-heading-size: 70px;
 }
