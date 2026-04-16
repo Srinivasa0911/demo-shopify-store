@@ -14,7 +14,7 @@
   </div>
 
   <div class="header-right">
-  <a href="{{ section.settings.button_link }}" class="btn">
+  <a href="{{ section.settings.button_link }}" class="btn" style="font-size: {{ section.settings.button_font_size }}px;">
 
   {% if section.settings.icon != blank and section.settings.icon_position == 'left' %}
     <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
@@ -74,6 +74,16 @@
     { "value": "left", "label": "Left" },
     { "value": "right", "label": "Right" }
   ]
+}
+{
+  "type": "range",
+  "id": "button_font_size",
+  "label": "Button Font Size",
+  "min": 12,
+  "max": 30,
+  "step": 1,
+  "default": 16,
+  "unit": "px"
 }
   ],
   "presets": [
