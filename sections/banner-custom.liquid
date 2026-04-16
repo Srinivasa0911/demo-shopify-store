@@ -9,7 +9,7 @@
 
     <p>{{ section.settings.text }}</p>
 
-     <a href="{{ section.settings.button_link }}" class="btn">
+     <a href="{{ section.settings.button_link }}" class="banner-btn">
 
   {% if section.settings.icon != blank and section.settings.icon_position == 'left' %}
     <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
@@ -51,24 +51,24 @@
     },
     {
       "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
+      "id": "button_text_one",
+      "label": "Button Text One",
       "default": "Shop Now"
     },
     {
       "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
+      "id": "button_link_one",
+      "label": "Button Link One"
     }
     {
   "type": "image_picker",
-  "id": "icon",
-  "label": "Button Icon"
+  "id": "icon_one",
+  "label": "Button Icon One"
 },
 {
   "type": "select",
-  "id": "icon_position",
-  "label": "Icon Position",
+  "id": "icon_position_one",
+  "label": "Icon Position One",
   "default": "right",
   "options": [
     { "value": "left", "label": "Left" },
