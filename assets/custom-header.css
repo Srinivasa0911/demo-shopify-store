@@ -51,7 +51,6 @@ transition: transform 0.3s ease;
   height: 100%;
   background: #000;
   transition: 0.4s;
-  color:#fff;
 }
 
 .btn:hover::before {
@@ -60,6 +59,10 @@ transition: transform 0.3s ease;
 
 .btn:hover img{
 filter: brightness(0) invert(1);
+}
+
+.btn:hover{
+color:#fff;
 }
 
 /* End Header Button CSS */
