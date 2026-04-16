@@ -41,5 +41,5 @@ p {
 }
 
 h1{
---font-heading-size: 70px;
+font-size:var(--font-heading-size);
 }
