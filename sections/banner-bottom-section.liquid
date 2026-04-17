@@ -1,0 +1,67 @@
+<style>
+.header-wrapper {
+  background-color: {{ section.settings.header_bg }};
+}
+</style>
+
+{% Start Banner Bottom Section %}
+
+<section class="custom-text-section">
+
+  <div class="page-width">
+
+    {% if section.settings.text != blank %}
+      <p class="custom-text">
+        {{ section.settings.text }}
+      </p>
+    {% endif %}
+
+  </div>
+
+</section>
+
+{% End Banner Bottom Section %}
+
+{% schema %}
+{
+  "name": "Custom Text Section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Write your content here"
+    },
+    {
+  "type": "color",
+  "id": "banner_bottom_bg",
+  "label": "Banner Bottom Background",
+  "default": "#ffffff"
+},
+    {
+  "type": "select",
+  "id": "alignment",
+  "label": "Text Alignment",
+  "default": "center",
+  "options": [
+    { "value": "left", "label": "Left" },
+    { "value": "center", "label": "Center" },
+    { "value": "right", "label": "Right" }
+  ]
+},
+{
+  "type": "range",
+  "id": "font_size",
+  "label": "Text Size",
+  "min": 12,
+  "max": 30,
+  "default": 16
+}
+  ],
+  "presets": [
+    {
+      "name": "Custom Text Section"
+    }
+  ]
+}
+{% endschema %}
