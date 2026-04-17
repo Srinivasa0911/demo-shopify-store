@@ -73,7 +73,7 @@ filter: brightness(0) invert(1);
 
 /* Text color change */
 .banner-btn:hover {
-  color: #fff; /* change text color here */
+  color: #000; /* change text color here */
 }
 
 p {
