@@ -1,7 +1,7 @@
 :root{
 --font-body-size: 16px;
 --font-button-size: 16px;
- --font-size: 16px;
+ --font-para-size: 16px;
 }
 
 .header-bar {
@@ -33,7 +33,7 @@ display: inline-flex;
 align-items: center;
 gap: 8px;
 padding: 8px 24px;
-background: #FFF543;
+background: #FFF544;
 color: #000;
 text-decoration: none;
 transition: all 0.3s ease;
@@ -78,12 +78,16 @@ filter: brightness(0) invert(1);
   color: #fff; /* change text color here */
 }
 
+body {
+  font-size: var(--font-body-size);
+}
+
 .btn {
   font-size: var(--font-button-size);
 }
 
 p {
-  font-size: var(--font-size);
+  font-size: var(--font-para-size);
 }
 
 .header-bar{
@@ -92,7 +96,6 @@ padding: 8px 50px;
 
 .header-left img{
 position: relative;
-top:4px;
 }
 
 /* End Header Button CSS */
