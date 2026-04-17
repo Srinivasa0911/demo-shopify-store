@@ -25,8 +25,8 @@ background-repeat: no-repeat;
 .banner-btn {
 display: inline-flex;
 align-items: center;
-gap: 24px;
-padding: 12px 40px;
+gap: 32px;
+padding: 12px 40px 12px 55px;
 background: #000;
 color: #fff;
 text-decoration: none;
