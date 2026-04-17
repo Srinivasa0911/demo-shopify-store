@@ -36,8 +36,8 @@
       "settings": {
         "text": "Write your contentewq",
         "banner_bottom_bg": "#ffffff",
-        "alignment": "center",
-        "font_size": 16
+        "alignment": "left",
+        "font_size": 12
       }
     }
   },
