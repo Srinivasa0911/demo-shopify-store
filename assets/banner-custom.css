@@ -57,11 +57,7 @@ transition: transform 0.3s ease;
   left: 0;
 }
 
-.banner-btn:hover img{
-filter: brightness(0) invert(0);
-}
-
-.banner-btn: img{
+.banner-btn img{
 filter: brightness(0) invert(1);
 }
 
