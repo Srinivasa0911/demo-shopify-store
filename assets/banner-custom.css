@@ -77,14 +77,15 @@ filter: brightness(0) invert(0);
   color: #000; /* change text color here */
 }
 
-.para {
- font-size: var(--font-para-size);
- line-height: var(--font-line-height);
- margin-bottom: var(--font-para-margin-size);
-}
-
 h1{
 font-size:var(--font-heading-size);
 margin-bottom:var(--font-margin-bottom);
 font-weight:var(--font-heading-weight);
 }
+
+.custom-para {
+ font-size: var(--font-para-size);
+ line-height: var(--font-line-height);
+ margin-bottom: var(--font-para-margin-size);
+}
+
