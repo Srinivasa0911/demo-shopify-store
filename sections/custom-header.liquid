@@ -1,11 +1,5 @@
 {{ 'custom-header.css' | asset_url | stylesheet_tag }}
 
-<style>
-.header-wrapper {
-  background-color: {{ section.settings.header_bg }};
-}
-</style>
-
 <!-- Start Custom Header -->
 
 <div class="header-bar">
@@ -22,11 +16,11 @@
   <div class="header-right">
   <a href="{{ section.settings.button_link }}" class="btn">
 
+  <span>{{ section.settings.button_text }}</span>
+
   {% if section.settings.icon != blank and section.settings.icon_position == 'left' %}
     <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
   {% endif %}
-
-  <span>{{ section.settings.button_text }}</span>
 
   {% if section.settings.icon != blank and section.settings.icon_position == 'right' %}
     <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
@@ -44,12 +38,6 @@
 {
   "name": "Custom Header",
   "settings": [
-    {
-  "type": "color",
-  "id": "header_bg",
-  "label": "Header Background",
-  "default": "#ffffff"
-},
     {
       "type": "image_picker",
       "id": "logo",
