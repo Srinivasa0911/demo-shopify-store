@@ -11,11 +11,11 @@
 
      <a href="{{ section.settings.button_link }}" class="banner-btn">
 
+  <span>{{ section.settings.button_text }}</span>
+
   {% if section.settings.icon != blank and section.settings.icon_position == 'left' %}
     <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
   {% endif %}
-
-  <span>{{ section.settings.button_text }}</span>
 
   {% if section.settings.icon != blank and section.settings.icon_position == 'right' %}
     <img src="{{ section.settings.icon | image_url }}" alt="icon" class="btn-icon">
@@ -50,17 +50,17 @@
       "default": "Add your description here"
     },
     {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "Shop Now"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
-    }
-    {
+  "type": "text",
+  "id": "button_text",
+  "label": "Button Text",
+  "default": "Shop Now"
+},
+{
+  "type": "url",
+  "id": "button_link",
+  "label": "Button Link"
+},
+{
   "type": "image_picker",
   "id": "icon",
   "label": "Button Icon"
