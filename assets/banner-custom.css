@@ -2,6 +2,7 @@
 --font-heading-size: 70px;
 --font-button-size: 16px;
  --font-para-size: 20px;
+ --font-para-margin-bottom:0px;
  --font-line-height: 24px;
  --font-margin-bottom:30px;
  --font-heading-weight:500;
@@ -79,6 +80,7 @@ filter: brightness(0) invert(0);
 p {
  font-size: var(--font-para-size);
  line-height: var(--font-line-height);
+ margin-bottom: var(--font-para-margin-bottom);
 }
 
 h1{
