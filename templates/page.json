@@ -34,10 +34,10 @@
       "type": "banner-bottom-section",
       "name": "Custom Text Section",
       "settings": {
-        "text": "Write your content here",
-        "banner_bottom_bg": "#f5f5f5",
+        "text": "Write your content here fedvd",
+        "banner_bottom_bg": "#000000",
         "alignment": "center",
-        "font_size": 16
+        "font_size": 12
       }
     }
   },
